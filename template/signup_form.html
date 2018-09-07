@@ -1,0 +1,73 @@
+<!--DocType-->
+<html>
+	<head>
+		<title>Signup</title>
+		<style type="text/css">
+			.label {text-align: right}
+      		.error {color: red}
+		</style>
+	</head>
+	<body>
+		<h2>Signup</h2>
+		<form method="post">
+			{% if data%}
+				
+				<!--Create a table -->
+				<table>
+					<tr>
+						<td class = "label">
+							UserName:
+						</td>
+						<td>
+							<input type="text" name="username" value = "{{data.username}}">
+						</td>
+						<td class="error">
+							{{data.username_error}}
+						</td>
+					</tr>
+						<td class = "label">
+							Password:
+						</td>
+						<td>
+							<input type="Password" name ="password" value = "{{data.password}}">
+						</td>
+						<td class = "error">
+							{{data.password_error}}
+						</td>	
+					<tr>
+					</tr>
+						<td class = "label">
+							Verify Password:
+						</td>
+						<td>
+							<input type="Password" name ="verify" value = "{{data.verify}}">
+						</td>
+						<td class = "error">
+							{{data.verified_password_error}}
+						</td>	
+					<tr>
+					</tr>
+						<td class = "label">
+							Email (optional):
+						</td>
+						<td>
+							<input type="text" name ="email" value = "{{data.email}}">
+						</td>
+						<td class = "error">
+							{{data.email_error}}
+						</td>	
+					<tr>
+					</tr>
+						<td>
+
+						</td>	
+						<td>
+							<input type="submit">
+						</td>
+							
+					<tr>	
+				</table>
+				{%endif%}
+		</form>	
+	</body>	
+</html>
